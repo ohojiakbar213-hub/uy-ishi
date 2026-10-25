@@ -1,0 +1,288 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080b18;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  background: #0c1020;
+  border-bottom: 1px solid #222941;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff633e;
+}
+
+.logo span {
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+nav a, .course-card a {
+  text-decoration: none;
+  color: #d1d5e5;
+}
+
+nav a:hover, .course-card a:hover {
+  color: #ff633e;
+}
+
+.nav-btn, .main-btn {
+  background: #ff633e;
+  color: white;
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 9px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 490px;
+  padding: 70px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background: radial-gradient(ellipse at 80% 40%, #28205b, #080b18 60%);
+}
+
+.hero-text {
+  max-width: 570px;
+}
+
+.tag, .section-title span {
+  color: #ff805e;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.1;
+  margin: 22px 0;
+}
+
+.hero h1 span {
+  color: #ff633e;
+}
+
+.hero p, .course-card p, .contact p {
+  color: #aeb6d0;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.hero-image {
+  position: relative;
+  font-size: 160px;
+  padding: 30px;
+  filter: drop-shadow(0 0 35px #7553ff);
+}
+
+.orbit {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 20px;
+  background: #ff633e;
+  border-radius: 50%;
+  padding: 18px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 35px 8%;
+  background: #101528;
+  text-align: center;
+}
+
+.stats h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.stats p {
+  color: #c4cbe0;
+}
+
+.courses {
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  margin-top: 15px;
+  font-size: 32px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.course-card {
+  background: #12182c;
+  border: 1px solid #282f49;
+  padding: 30px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-7px);
+  border-color: #ff633e;
+}
+
+.course-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.course-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.course-card p {
+  min-height: 85px;
+}
+
+.about {
+  margin: 0 8% 70px;
+  padding: 40px;
+  background: linear-gradient(120deg, #1c2044, #12182c);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-icon {
+  font-size: 80px;
+}
+
+.about h2 {
+  margin: 15px 0;
+}
+
+.about p {
+  color: #b9c0d5;
+  line-height: 1.7;
+}
+
+.contact {
+  padding: 65px 20px;
+  text-align: center;
+  background: #11162a;
+}
+
+.contact h2 {
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 15px;
+  width: 230px;
+  border: 1px solid #343c5b;
+  border-radius: 8px;
+  background: #080b18;
+  color: white;
+  outline: none;
+}
+
+button {
+  padding: 15px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #ff633e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 15px;
+  color: #aeb6d0;
+  line-height: 2;
+}
+
+footer h3 {
+  color: #ff633e;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    font-size: 110px;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
